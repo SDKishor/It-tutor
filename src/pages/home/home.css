@@ -17,34 +17,38 @@
   text-transform: capitalize;
   max-width: 1000px;
   margin: 0;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.781);
   font-size: 75px;
   text-shadow: 0px 5px 5px #111;
 }
 
-.learnMore {
+.serviceSec {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-.learnMore p {
-  font-size: 50px;
-  font-weight: normal;
-  color: #fff;
-  margin-right: 30px;
-  text-shadow: 0px 5px 5px #111;
+.serviceSec h2 {
+  font-size: 40px;
+  color: #614ef9;
 }
 
-.learnMore button {
-  height: 60px;
-  padding: 10px 25px;
+.serviceSec .services {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.seeMoreBtn {
+  width: 400px;
   background-color: #614ef9;
-  color: #ffffffc9;
-  border: none;
-  border-radius: 50px;
   font-weight: bold;
-  font-size: 16px;
-  box-shadow: 3px 5px 15px #fff;
+  font-size: 20px;
+  border: none;
+  padding: 20px 25px;
+  color: rgba(255, 255, 255, 0.705);
+  border-radius: 10px;
+  margin-top: 50px;
+  cursor: pointer;
 }

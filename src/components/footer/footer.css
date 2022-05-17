@@ -6,6 +6,11 @@ footer {
 }
 
 .footerLogo {
+  text-align: center;
+  width: 50%;
+  font-size: 50px;
+}
+.contactSec {
   width: 50%;
 }
 

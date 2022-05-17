@@ -1,0 +1,42 @@
+.service {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 25px -10px #614ef9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Serviceimage {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Serviceimage img {
+  height: 100%;
+}
+
+.service h2 {
+  margin: 15px;
+  font-size: 28px;
+}
+
+.service p {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service button {
+  background-color: #614ef9;
+  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  color: rgba(255, 255, 255, 0.705);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
