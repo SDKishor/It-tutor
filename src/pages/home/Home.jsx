@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/footer/Footer";
 import "./home.css";
 
 export const Home = () => {
@@ -11,6 +12,8 @@ export const Home = () => {
           <button>Learn More</button>
         </div>
       </div>
+
+      <Footer></Footer>
     </div>
   );
 };

@@ -1,0 +1,20 @@
+footer {
+  background-color: #614ef9;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.footerLogo {
+  width: 50%;
+}
+
+.contactOption {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.contactOption p {
+  margin: 7px 10px;
+}
