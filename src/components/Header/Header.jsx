@@ -39,9 +39,12 @@ export const Header = () => {
         </button>
         <div className="links ">
           <CustomLink to="/">HOME</CustomLink>
-          <CustomLink to="/reviews">REVIEWS</CustomLink>
-          <CustomLink to="/dashboard">DASHBOARD</CustomLink>
+          <CustomLink to="/services">Services</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
+          <CustomLink to="/about">ABOUT</CustomLink>
+          <CustomLink className="loginBtn" to="/Login">
+            Login
+          </CustomLink>
         </div>
       </nav>
     </header>
