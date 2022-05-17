@@ -1,0 +1,50 @@
+.banner {
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(#f5f6fc49, #14141436),
+    url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner h2 {
+  text-transform: capitalize;
+  max-width: 1000px;
+  margin: 0;
+  color: #fff;
+  font-size: 75px;
+  text-shadow: 0px 5px 5px #111;
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.learnMore p {
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+  margin-right: 30px;
+  text-shadow: 0px 5px 5px #111;
+}
+
+.learnMore button {
+  height: 60px;
+  padding: 10px 25px;
+  background-color: #614ef9;
+  color: #ffffffc9;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 3px 5px 15px #fff;
+}
