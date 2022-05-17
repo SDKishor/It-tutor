@@ -1,0 +1,95 @@
+.chackoutPage {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.studentInfo {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.studentInfo h3 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, #614ef9, #00000000);
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  margin: 10px 0px;
+}
+
+.inputGroup label {
+  font-size: 18px;
+}
+.inputGroup input,
+.inputGroup textarea {
+  margin-top: 10px;
+  max-width: 500px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #624ef949;
+  padding-left: 20px;
+}
+
+.inputGroup textarea {
+  height: 150px;
+  padding: 20px;
+}
+
+.chackoutPage .submitBtn {
+  padding: 20px;
+  font-weight: bold;
+  width: 100%;
+  background-color: #614ef9;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.courseInfo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseContainer {
+  height: 70%;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.secelectedCourse {
+  background-color: #624ef949;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.secelectedCourse h4 {
+  margin: 10;
+  font-size: 20px;
+  font-weight: normal;
+}
+.secelectedCourse p {
+  font-weight: bold;
+}
+
+.buttonContainer {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}

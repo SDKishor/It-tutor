@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./service.css";
 
 export const Service = () => {
+  const navigate = useNavigate();
+
+  const proccedToChackout = () => {
+    navigate("/chackout");
+  };
   return (
     <div className="service">
       <div className="Serviceimage">
@@ -10,12 +16,13 @@ export const Service = () => {
           alt=""
         />
       </div>
-      <h2>Title</h2>
+      <h3 className="serviceTitle">Web Devlopment</h3>
+      <h3>Price: 5000.00 TAKA </h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
         voluptatibus, est distinctio earum quo consectetur.
       </p>
-      <button>Learn More</button>
+      <button onClick={proccedToChackout}>Book Now</button>
     </div>
   );
 };

@@ -6,6 +6,7 @@
   box-shadow: 0 0 25px -10px #614ef9;
   padding: 20px;
   border-radius: 10px;
+  margin: 20px;
 }
 
 .Serviceimage {
@@ -19,9 +20,11 @@
   height: 100%;
 }
 
-.service h2 {
-  margin: 15px;
-  font-size: 28px;
+.serviceTitle {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #614ef9;
 }
 
 .service p {
