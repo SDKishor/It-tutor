@@ -45,7 +45,7 @@ export const Header = () => {
         <button onClick={toggleMenu} className="closeBtn">
           X
         </button>
-        <div className="links ">
+        <div className="links">
           <CustomLink to="/">HOME</CustomLink>
           <CustomLink to="/services">Services</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>

@@ -131,3 +131,45 @@
   border-radius: 50px;
   cursor: pointer;
 }
+
+@media (max-width: 700px) {
+  .banner {
+    height: 700px;
+    width: 100%;
+  }
+
+  .banner h2 {
+    width: 80%;
+    font-size: 40px;
+  }
+
+  .serviceSec .services {
+    flex-direction: column;
+  }
+
+  .seeMoreBtn {
+    width: 90%;
+  }
+
+  .feedbackSec {
+    width: 100%;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .contentContainer .leftside {
+    width: 100%;
+  }
+  .contentContainer .comments {
+    width: 80%;
+  }
+  .imageContainer {
+    transform: scale(0.8);
+  }
+
+  .contentContainer .imageContainer .img {
+    margin: 0;
+  }
+}

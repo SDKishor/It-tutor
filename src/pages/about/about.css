@@ -1,0 +1,8 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutPage p {
+  width: 50%;
+}
