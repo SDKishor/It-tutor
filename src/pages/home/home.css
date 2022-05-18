@@ -66,18 +66,21 @@
   margin: 100px 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .contentContainer .comments {
   width: 50%;
 }
 
-.contentContainer .imageContainer {
-  width: 40%;
-  height: 100%;
+.leftside {
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contentContainer .imageContainer {
+  width: 400px;
+  height: 400px;
 }
 .contentContainer .imageContainer .img {
   width: 100%;

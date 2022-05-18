@@ -25,11 +25,13 @@ export const Home = () => {
       <div className="feedbackSec">
         <h2>Student's Feedback</h2>
         <div className="contentContainer">
-          <div className="imageContainer">
-            <div className="img">
-              <div className="img1"></div>
-              <div className="img2"></div>
-              <div className="img3"></div>
+          <div className="leftside">
+            <div className="imageContainer">
+              <div className="img">
+                <div className="img1"></div>
+                <div className="img2"></div>
+                <div className="img3"></div>
+              </div>
             </div>
           </div>
 
