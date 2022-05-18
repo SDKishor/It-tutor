@@ -8,8 +8,13 @@ export const Login = () => {
       <div className="login">
         <h2>Login</h2>
         <form action="">
-          <input type="email" placeholder="Email" name="email" />
-          <input type="password" placeholder="Password" name="Password" />
+          <input type="email" placeholder="Email" name="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="Password"
+            required
+          />
           <button className="loginPageBtn" type="submit">
             Login
           </button>

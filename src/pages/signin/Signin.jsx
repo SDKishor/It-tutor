@@ -8,9 +8,14 @@ export const Signin = () => {
       <div className="login">
         <h2>Register</h2>
         <form action="">
-          <input type="text" placeholder="Username" name="UserName" />
-          <input type="email" placeholder="Email" name="email" />
-          <input type="password" placeholder="Password" name="Password" />
+          <input type="text" placeholder="Username" name="UserName" required />
+          <input type="email" placeholder="Email" name="email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="Password"
+            required
+          />
           <input
             type="password"
             placeholder="Confirm Password"
