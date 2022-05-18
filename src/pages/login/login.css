@@ -20,10 +20,21 @@
   margin: 0;
   margin-bottom: 20px;
 }
-.registerLink {
+.registerLink,
+.forgetLink {
   margin: 0;
   margin-bottom: 20px;
   font-size: 14px;
+}
+.forgetLink {
+  margin: 0;
+}
+.forgetLink button {
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  color: #614ef9;
+  cursor: pointer;
 }
 
 .registerLink a {

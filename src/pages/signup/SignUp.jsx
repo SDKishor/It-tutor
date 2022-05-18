@@ -1,21 +1,38 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 export const SignUp = () => {
+  const nameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const ConfirmPasswordRef = useRef("");
+  const [errorText, SetErrorText] = useState();
   const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating, error] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
 
-  const handleSingup = (e) => {
+  const handleSingup = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    createUserWithEmailAndPassword(email, password);
+    const ConfirmPassword = ConfirmPasswordRef.current.value;
+    const displayName = nameRef.current.value;
+    if (password !== ConfirmPassword) {
+      SetErrorText("Your confirm password did not match");
+      return;
+    }
+    await createUserWithEmailAndPassword(email, password);
+
+    await updateProfile({ displayName });
+    alert("Updated profile");
+    navigate("/");
   };
 
   if (user) {
@@ -28,7 +45,13 @@ export const SignUp = () => {
       <div className="login">
         <h2>Register</h2>
         <form onSubmit={handleSingup} action="">
-          <input type="text" placeholder="Username" name="UserName" required />
+          <input
+            ref={nameRef}
+            type="text"
+            placeholder="Username"
+            name="UserName"
+            required
+          />
           <input
             ref={emailRef}
             type="email"
@@ -44,12 +67,13 @@ export const SignUp = () => {
             required
           />
           <input
+            ref={ConfirmPasswordRef}
             type="password"
             placeholder="Confirm Password"
             name="ConfirmPassword"
           />
 
-          <p className="errorText"></p>
+          <p className="errorText">{errorText}</p>
           <button className="loginPageBtn" type="submit">
             Register
           </button>

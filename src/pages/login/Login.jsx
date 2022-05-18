@@ -1,16 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./login.css";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
+  useSendPasswordResetEmail,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [sendPasswordResetEmail, sending, reseterror] =
+    useSendPasswordResetEmail(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const emailRef = useRef("");
@@ -38,6 +43,23 @@ export const Login = () => {
   if (error) {
     errorElement = `Error: ${error.message}`;
   }
+
+  if (reseterror) {
+    toast(reseterror.message);
+  }
+
+  const handlepasswordReset = async () => {
+    console.log("hello");
+    const Emailregex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const email = emailRef.current.value;
+
+    if (Emailregex.test(email)) {
+      await sendPasswordResetEmail(email);
+      toast("Email sent");
+    } else {
+      toast("Please Enter your Email Address");
+    }
+  };
   return (
     <div className="loginPage">
       <div className="login">
@@ -62,6 +84,10 @@ export const Login = () => {
             Login
           </button>
         </form>
+        <p className="forgetLink">
+          Forget Password?{" "}
+          <button onClick={handlepasswordReset}>Click Here</button>
+        </p>
         <p className="errorText">{errorElement}</p>
         <p className="registerLink">
           Don't have an account <Link to="/signup">Register Here</Link>
@@ -75,6 +101,7 @@ export const Login = () => {
           </div>
           <p>Login With Google</p>
         </button>
+        <ToastContainer></ToastContainer>
       </div>
     </div>
   );

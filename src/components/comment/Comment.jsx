@@ -5,8 +5,8 @@ export const Comment = () => {
   return (
     <div className="comment">
       <h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Repellat, error.
+        the tutoring is very food. sir can explain complex things in a way that
+        you gonna enjoy and understand. he is a very puntual guy.
       </h3>
       <div className="userInfo">
         <div className="image"></div>

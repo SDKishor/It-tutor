@@ -12,7 +12,7 @@ export const Header = () => {
   const handleSignOut = () => {
     signOut(auth);
   };
-
+  console.log(user);
   const handleResize = () => {
     if (window.innerWidth < 700) {
       setOpenMenu(false);
@@ -47,7 +47,6 @@ export const Header = () => {
         </button>
         <div className="links">
           <CustomLink to="/">HOME</CustomLink>
-          <CustomLink to="/services">Services</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
           <CustomLink to="/about">ABOUT</CustomLink>
 

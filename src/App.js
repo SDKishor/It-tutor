@@ -8,7 +8,6 @@ import { Chackout } from "./pages/chackout/Chackout";
 import { Home } from "./pages/home/Home";
 import { Login } from "./pages/login/Login";
 import { NotFound } from "./pages/NotFound/NotFound";
-import { Services } from "./pages/Services/Services";
 import { SignUp } from "./pages/signup/SignUp";
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
         <Route path="/signup" element={<SignUp></SignUp>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/about" element={<About></About>} />
-        <Route path="/services" element={<Services></Services>} />
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
