@@ -79,3 +79,11 @@
 button:active {
   transform: scale(0.99);
 }
+
+.errorText {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}

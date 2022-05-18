@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/Header/Header";
+import { RequireAuth } from "./components/RequireAuth";
 import { Chackout } from "./pages/chackout/Chackout";
 import { Home } from "./pages/home/Home";
 import { Login } from "./pages/login/Login";
-import { Signin } from "./pages/signin/Signin";
+import { SignUp } from "./pages/signup/SignUp";
 
 function App() {
   return (
@@ -13,9 +14,16 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path="/chackout" element={<Chackout></Chackout>} />
+        <Route
+          path="/chackout"
+          element={
+            <RequireAuth>
+              <Chackout></Chackout>
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login></Login>} />
-        <Route path="/signin" element={<Signin></Signin>} />
+        <Route path="/signup" element={<SignUp></SignUp>} />
       </Routes>
     </div>
   );

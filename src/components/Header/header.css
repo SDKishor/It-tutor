@@ -65,7 +65,8 @@ nav {
   margin-block: 1px;
 }
 
-nav a {
+nav a,
+.SignOutBtn {
   text-transform: uppercase;
   text-decoration: none;
   margin-inline: 8px;
@@ -77,12 +78,15 @@ nav a:hover {
   color: #111827;
 }
 
-.loginBtn {
+.loginBtn,
+.SignOutBtn {
+  font-weight: bold;
   background-color: #fff;
   padding: 8px 15px;
   color: #614ef9;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {

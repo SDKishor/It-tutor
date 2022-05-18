@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import CustomLink from "../../hooks/CustomLink";
 import "./header.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(true);
+  const [user, loading, error] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
 
   const handleResize = () => {
     if (window.innerWidth < 700) {
@@ -42,9 +50,16 @@ export const Header = () => {
           <CustomLink to="/services">Services</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
           <CustomLink to="/about">ABOUT</CustomLink>
-          <CustomLink className="loginBtn" to="/Login">
-            Login
-          </CustomLink>
+
+          {user ? (
+            <button className="SignOutBtn" onClick={handleSignOut}>
+              Sign Out
+            </button>
+          ) : (
+            <CustomLink className="loginBtn" to="/Login">
+              Login
+            </CustomLink>
+          )}
         </div>
       </nav>
     </header>
